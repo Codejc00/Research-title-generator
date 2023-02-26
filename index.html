@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="icon" href="images/OIP.jpg">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Research Title | Generator</title>
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+		<style>
+			body {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				height: 100vh;
+			}
+
+			header {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				height: 50vh;
+			}
+
+			h1 {
+				font-size: 4rem;
+				text-align: center;
+			}
+
+			#g {
+				color: #6cc644;
+			}
+
+			input[type="submit"] {
+				cursor: pointer;
+				margin-bottom: 150px;
+			}
+
+		/* Set a minimum width for the button */
+			#generate-button {
+			min-width: 120px;
+			}
+
+			/* Add styles for smaller screens */
+			@media only screen and (max-width: 600px) {
+			#generate-button {
+				min-width: 80px;
+				font-size: 14px;
+			}
+			}
+			
+			#header {
+				padding-bottom: 150px;
+				margin-bottom: none;
+			}
+
+			@media only screen and (max-width: 800px) {
+			#header p {
+				text-align: center;
+				font-size: 16px;
+				margin: 0 auto;
+				max-width: 80%;
+			}
+			}
+
+			@media only screen and (max-width: 800px) {
+			#header h1 {
+				font-size: 36px;
+				text-align: center;
+			}
+			}
+
+			.success {
+				color: #373d2e;
+				background-color: #6cc644;
+				border-color: #c3e6cb;
+				padding: .75rem 1.25rem;
+				border: 1px solid transparent;
+				border-radius: .25rem;
+				margin-bottom: 1rem;
+			}
+
+			.title{
+				padding-bottom: 4rem;
+			}
+
+			#result {
+				display: none;
+			}
+
+
+
+		</style>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<h1>Research Title <span id="g">Generator</span> </h1>
+				<p>Currently, the generated titles are for computer-related majors.</p>
+				<p>This tool randomly generates research title ideas for your reference or inspiration.<br/></p>
+			</header>
+
+			<div class="title">
+				<p id="result" class="success"></p>
+			</div>
+				<input type="submit" value="Generate" id="generate-button"/>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<ul class="icons">
+					<li><a href="https://www.facebook.com/johncarlo.contaoiiii" target="_blank" class="icon brands fa-facebook"><span class="label">Twitter</span></a></li>
+					<li><a href="https://instagram.com/jancaloys?igshid=YzgyMTM2MGM=" target="_blank" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+					<li><a href="https://github.com/Codejc00" target="_blank" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+					<li><a href="mailto:johncarlocontaoi17@gmail.com" target="_blank" class="icon fa-envelope"><span class="label">Email</span></a></li>
+				</ul>
+				<ul class="copyright">
+					<li>caloyss.</li><li>Credits: <a href="http://html5up.net">HTML5 UP</a></li>
+				</ul>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/main.js"></script>
+
+			<script type="text/javascript">
+					// get the button element
+		const generateButton = document.getElementById("generate-button");
+
+		// add event listener to the button
+		generateButton.addEventListener("click", function() {
+			// generate the research title
+			const researchTitle = generateResearchTitle();
+			
+			// update the text of the button
+			generateButton.value = "Generate another!";
+			
+			// display the research title
+			const resultElement = document.getElementById("result");
+			resultElement.innerText = researchTitle;
+		});
+
+		// function to generate the research title
+		function generateResearchTitle() {
+		// your code to generate the research title here
+		}
+
+			
+			// get references to the button and result elements
+				const button = document.getElementById('generate-button');
+				const result = document.getElementById('result');
+
+				// define an array of possible titles
+				const titles = [
+					'Development of a Web-Based E-Commerce Platform',
+					'Design and Implementation of a Mobile Application for Restaurant Ordering',
+					'Building a Smart Irrigation System using Arduino Uno',
+					'Predicting Stock Prices using Machine Learning Techniques',
+					'Developing a Computer Vision System for Object Detection and Tracking',
+					'Design and Implementation of an Online Learning Management System',
+					'Building a Blockchain-Based Voting System for Secure and Transparent Elections',
+					'Developing a Recommender System for Personalized Movie Recommendations',
+					'Design and Development of an Automated Customer Support Chatbot',
+					'Building an Intelligent Traffic Management System using IoT and Cloud Computing',
+					'Creating a web-based platform for online medical consultation and diagnosis',
+					'Developing a web-based tool for sentiment analysis and opinion mining in social media data',
+					'Building a web-based job search and recruitment portal with intelligent job matching algorithms',
+					'Design and implementation of a web-based learning management system for schools and universities',
+					'Design and development of a mobile application for personalized fitness coaching and nutrition tracking',
+					'Building a mobile application for language learning with adaptive learning algorithms and gamification features',
+					'Developing a mobile application for real-time traffic monitoring and route optimization for public transport',
+					'Design and implementation of a mobile application for remote health monitoring and emergency response',
+					'Creating a mobile application for mental health assessment and therapy with AI-based chatbots',
+					'Building a smart home automation system using Arduino and IoT sensors',
+					'Developing an Arduino-based autonomous robot for indoor navigation and surveillance',
+					'Design and implementation of an Arduino-powered wearable health monitoring device',
+					'Creating an Arduino-based weather station for environmental monitoring and forecasting',
+					'Developing an Arduino-controlled irrigation system for precision agriculture',
+					'Design and development of a machine learning-based fraud detection system for online transactions',
+					'Building a machine learning model for predicting customer churn in telecommunication industry',
+					'Developing a machine learning-based recommendation system for personalized news and article suggestions',
+					'Design and implementation of a machine learning algorithm for sentiment analysis and opinion mining in social media data',
+					'Creating a machine learning model for predicting stock price movements in financial markets',
+					'Class Time Table in Android',
+					'Online Kindergarten Learning Courseware',
+					'An Insight on a Mobile Friendly Web',
+					'High School Grade Recording System Form & Form',
+					'Software update and implementation of multiprocessor simulation in sim-cache',
+					'Web and Mobile Forum for Education System',
+					'Game AI Conversational behaviours',
+					'Evolution of transglutaminases from papain-like cysteine proteases',
+					'Mobile Based ePrescribing App with Admin Panel',
+					'First-aid App for Android',
+					'E-Learning System',
+					'SMS based irrigation App (Android, iOS, windowMobile)',
+					'Web-based Entrance Examination',
+					'Safety Notification Broadcast System',
+					'Online payroll system',
+					'Quantitative Risk Management Methods in Software and Systems Projects',
+					'Warehouse Management System',
+					'Android-Based Class Attendance Monitoring Application using Barcode',
+					'Mobile Based Exam Schedule Notification App',
+					'Real-time suspects detection in video surveillance systems'
+				];
+
+
+				// add a click event listener to the button
+				button.addEventListener('click', () => {
+					// generate a random index to select a title from the array
+					const index = Math.floor(Math.random() * titles.length);
+					// set the text of the result element to the selected title
+					result.textContent = titles[index];
+					// show the result element
+					result.style.display = 'block';
+				});
+
+			</script>
+	</body>
+</html>
